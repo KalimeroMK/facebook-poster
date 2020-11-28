@@ -6,6 +6,7 @@ namespace NotificationChannels\FacebookPoster;
 
 use Facebook\Exceptions\FacebookSDKException;
 use Facebook\FacebookApp;
+use Facebook\Facebook as BaseFacebook;
 use Facebook\FacebookClient;
 use Facebook\HttpClients\HttpClientsFactory;
 use Facebook\PersistentData\PersistentDataFactory;
@@ -13,7 +14,7 @@ use Facebook\PseudoRandomString\PseudoRandomStringGeneratorFactory;
 use Facebook\Url\FacebookUrlDetectionHandler;
 use Facebook\Url\UrlDetectionInterface;
 
-class Facebook extends \Facebook\Facebook
+class Facebook extends BaseFacebook
 {
     public function __construct(array $config = [])
     {
